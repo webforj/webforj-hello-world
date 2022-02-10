@@ -6,17 +6,18 @@
 
     <groupId>org.dwcj</groupId>
     <artifactId>hwj</artifactId>
-    <version>0.01</version>
+    <version>0.003</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <jar-directory>${env.USERPROFILE}/.dwcj/</jar-directory>
     </properties>
 
     <repositories>
         <repository>
             <id>dwcj-engine</id>
-            <url>https://github.com/DwcJava/engine/releases/download/0.001/dwcj.jar</url>
+            <url>https://github.com/DwcJava/engine/releases/download/${version}/dwcj-${version}.jar</url>
         </repository>
     </repositories>
 
@@ -24,9 +25,9 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj.jar</artifactId>
-            <version>1.0</version>
+            <version>${version}</version>
             <scope>system</scope>
-            <systemPath>${project.build.directory}/dwcj.jar</systemPath>
+            <systemPath>${jar-directory}dwcj-${version}.jar </systemPath>
         </dependency>
     </dependencies>
 
@@ -45,8 +46,8 @@
                         <goal>wget</goal>
                     </goals>
                     <configuration>
-                        <url>https://github.com/DwcJava/engine/releases/download/0.001/dwcj.jar</url>
-                        <outputDirectory>${project.build.directory}</outputDirectory>
+                        <uri>https://github.com/DwcJava/engine/releases/download/${version}/dwcj-${version}.jar</uri>
+                        <outputDirectory>${jar-directory}</outputDirectory>
                     </configuration>
                 </execution>
             </executions>

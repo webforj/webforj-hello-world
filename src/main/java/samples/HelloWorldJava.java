@@ -1,11 +1,11 @@
 package samples;
 import org.dwcj.*;
-import org.dwcj.controls.AbstractDwcControl;
-import org.dwcj.controls.Button;
-import org.dwcj.controls.Label;
+import org.dwcj.controls.*;
 import org.dwcj.events.ButtonPushEvent;
 import org.dwcj.exceptions.DwcAppInitializeException;
 import org.dwcj.panels.AppPanel;
+import org.dwcj.controls.IExpansible.Expanse;
+import org.dwcj.controls.IThemable.Theme;
 
 public class HelloWorldJava extends App{
 
@@ -23,8 +23,8 @@ public class HelloWorldJava extends App{
 
         Button btn = new Button("Say Hello");
         panel.add(btn);
-        btn.setTheme(btn.THEME_SUCCESS);
-        btn.setExpanse(btn.EXPANSE_XLARGE);
+        btn.setTheme(Theme.DANGER);
+        btn.setExpanse(Expanse.MEDIUM);
 
         btn.onClick(this::onButtonPush);
     }
