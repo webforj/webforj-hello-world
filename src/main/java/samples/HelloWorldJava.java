@@ -8,8 +8,6 @@ import org.dwcj.controls.IExpansible.Expanse;
 import org.dwcj.controls.IThemable.Theme;
 
 public class HelloWorldJava extends App{
-
-
     @Override
     public void run() throws DwcAppInitializeException {
         AppPanel panel = new AppPanel();
@@ -19,7 +17,7 @@ public class HelloWorldJava extends App{
         panel.setStyle("padding","20px");
         panel.setStyle("border","1px dotted");
 
-        panel.add(new Label("Hello World Sample"));
+        panel.add(new Label("Hello World"));
 
         Button btn = new Button("Say Hello");
         panel.add(btn);
