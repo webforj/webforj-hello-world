@@ -40,7 +40,8 @@ public class HelloWorldJava extends App{
 
 The result is a modern, responsive HTML5 Web App.
 
-![ScreenShotHelloWorld](https://user-images.githubusercontent.com/4833070/170955904-2eb3b3ac-eb42-428f-aa5a-d126067a4d4f.png)
+![image](https://user-images.githubusercontent.com/4833070/170968208-6ff79616-ed95-40f7-aa75-d5180bf71167.png)
+
 
 ## How to deploy the App 
 
@@ -56,7 +57,8 @@ The result is a modern, responsive HTML5 Web App.
 3. Adjust your settings.xml or the pom.xml to point <dwcj-lib> to the copy on your disc, most likely <bbjdir>/plugins/DWCJ/lib/dwc-xxxxx.jar
 4. Reload maven and build the jar
 5. Go to the DWCJ Plug-In configure screen and add the jar file (or the class bin folder) to the classpath
-6. enter samples.HelloWorldJava into the "Class" entry
+    ![image](https://user-images.githubusercontent.com/4833070/170968004-959b47e3-fc82-4819-9894-9ca2a0c9717b.png)
+6. enter samples.HelloWorldJava into the "Class" entry  
 7. Click the "launch" button to see if it works
 
 
