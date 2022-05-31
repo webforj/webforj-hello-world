@@ -4,16 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dwcj</groupId>
-    <artifactId>hwj</artifactId>
+    <groupId>org.dwcj.samples</groupId>
+    <artifactId>hello-world-java</artifactId>
     <version>0.005</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <!-- adjust this line or create dwcj-lib in your settings.xml profile
+
+        <!-- adjust this line or create dwcj-lib in your settings.xml profile -->
+        <!--
         <dwcj-lib>/bbx/plugins/DWCJ/lib/dwcj-0.005.jar</dwcj-lib>
         -->
+
     </properties>
 
     <dependencies>
@@ -28,36 +31,16 @@
 
     <build>
         <finalName>HelloWorldJava</finalName>
-    <plugins>
-        <plugin>
-            <groupId>com.googlecode.maven-download-plugin</groupId>
-            <artifactId>download-maven-plugin</artifactId>
-            <version>1.4.2</version>
-            <executions>
-                <execution>
-                    <id>install-dwcj</id>
-                    <phase>clean</phase>
-                    <goals>
-                        <goal>wget</goal>
-                    </goals>
-                    <configuration>
-                        <uri>https://github.com/DwcJava/engine/releases/download/${version}/dwcj-${version}.jar</uri>
-                        <outputDirectory>${jar-directory}</outputDirectory>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-
-        <!-- Set the jar output Directory -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.3.2</version>
-            <configuration>
-                <outputDirectory>target/lib/</outputDirectory>
-            </configuration>
-        </plugin>
-
-    </plugins>
+        <plugins>
+            <!-- Set the jar output Directory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <outputDirectory>target/lib/</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
