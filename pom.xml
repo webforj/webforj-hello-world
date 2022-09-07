@@ -12,10 +12,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-<!-- adjust this line or create dwcj-lib in your settings.xml profile -->
-<!--
-<dwcj-lib>/bbx/plugins/DWCJ/lib/dwcj-0.005.jar</dwcj-lib>
--->
+    <!-- dwcj-lib in your settings.xml profile, pointing to your local dwcj -->
 
     </properties>
 
