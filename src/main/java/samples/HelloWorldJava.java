@@ -2,8 +2,6 @@ package samples;
 
 import org.dwcj.App;
 import org.dwcj.controls.Button;
-import org.dwcj.controls.IExpansible.Expanse;
-import org.dwcj.controls.IThemable.Theme;
 import org.dwcj.controls.Label;
 import org.dwcj.events.ButtonPushEvent;
 import org.dwcj.exceptions.DwcAppInitializeException;
@@ -25,8 +23,8 @@ public class HelloWorldJava extends App {
         Button btn = new Button("Say Hello");
         panel.add(btn);
 
-        btn.setTheme(Theme.DANGER);
-        btn.setExpanse(Expanse.MEDIUM);
+        btn.setTheme(Button.Theme.DANGER);
+        btn.setExpanse(Button.Expanse.MEDIUM);
 
         btn.onClick(this::onButtonPush);
     }
