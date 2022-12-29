@@ -6,7 +6,7 @@
 
     <groupId>org.dwcj.samples</groupId>
     <artifactId>hello-world-java</artifactId>
-    <version>0.008</version>
+    <version>0.009</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -14,7 +14,7 @@
 
         <!-- utilize this line or create dwcj-lib in your settings.xml profile -->
         <!--
-        <dwcj-lib>/bbx/plugins/DWCJ/lib/dwcj-0.008.jar</dwcj-lib>
+        <dwcj-lib>/bbx/plugins/DWCJ/lib/dwcj-0.009.jar</dwcj-lib>
         -->
 
     </properties>
