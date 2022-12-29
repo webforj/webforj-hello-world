@@ -1,11 +1,11 @@
 package samples;
 
 import org.dwcj.App;
-import org.dwcj.controls.Button;
-import org.dwcj.controls.Label;
-import org.dwcj.events.ButtonPushEvent;
+import org.dwcj.controls.button.Button;
+import org.dwcj.controls.button.events.ButtonClickEvent;
+import org.dwcj.controls.label.Label;
+import org.dwcj.controls.panels.AppPanel;
 import org.dwcj.exceptions.DwcAppInitializeException;
-import org.dwcj.panels.AppPanel;
 
 public class HelloWorldJava extends App {
     @Override
@@ -29,8 +29,8 @@ public class HelloWorldJava extends App {
         btn.onClick(this::onButtonPush);
     }
 
-    private void onButtonPush(ButtonPushEvent buttonPushEvent) {
-        App.msgbox("Hello Folks");
+    private void onButtonPush(ButtonClickEvent buttonClickEvent) {
+        App.msgbox("Hello World!");
     }
 
 }
