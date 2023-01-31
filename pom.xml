@@ -23,7 +23,7 @@
          <dependency>
                   <groupId>org</groupId>
                   <artifactId>dwcj</artifactId>
-                  <version>0.011alpha</version>
+                  <version>0.010alpha</version>
          </dependency>
     </dependencies>
 
