@@ -20,13 +20,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.dwcj</groupId>
-            <artifactId>dwcj.jar</artifactId>
-            <version>${version}</version>
-            <scope>system</scope>
-            <systemPath>${dwcj-lib}</systemPath>
-        </dependency>
+         <dependency>
+                  <groupId>org</groupId>
+                  <artifactId>dwcj</artifactId>
+                  <version>0.011alpha</version>
+         </dependency>
     </dependencies>
 
     <build>
