@@ -6,7 +6,7 @@
 
     <groupId>org.dwcj.samples</groupId>
     <artifactId>hello-world-java</artifactId>
-    <version>0.16.0-SNAPSHOT</version>
+    <version>0.16.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,21 +17,30 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>0.16.0-SNAPSHOT</version>
+            <version>0.16.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
         <finalName>HelloWorldJava</finalName>
         <plugins>
-            <!-- Set the jar output Directory -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
+                <groupId>org.dwcj</groupId>
+                <artifactId>dwcj-install-maven-plugin</artifactId>
+                <version>0.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>install</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <outputDirectory>target/lib/</outputDirectory>
+                    <!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
+                    <deployurl>http://localhost:8888/dwcj-install</deployurl>
+                    <classname>samples.HelloWorldJava</classname>
+                    <publishname>hworld</publishname>
+                    <debug>true</debug>
                 </configuration>
             </plugin>
         </plugins>
