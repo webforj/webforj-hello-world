@@ -1,5 +1,16 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
+  "name": "My Java Project",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "extensions": [
+    "ms-vscode-remote.remote-containers"
+  ],
+  "settings": {
+    "java.home": "/usr/local/openjdk-17",
+    "java.version": "17"
+  },
+  "remoteEnv": {
+    "JAVA_HOME": "/usr/local/openjdk-17",
+    "PATH": "/usr/local/openjdk-17/bin:${PATH}"
   }
 }
