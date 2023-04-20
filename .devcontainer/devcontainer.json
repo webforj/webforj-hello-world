@@ -1,10 +1,18 @@
 {
   "name": "DWCJ HelloWorld Application",
-  "image": "mcr.microsoft.com/vscode/devcontainers/java:0-17",
-  "features": {
-	"ghcr.io/devcontainers-contrib/features/maven-sdkman:2": {},
-	"ghcr.io/devcontainers/features/docker-in-docker:2": {}  
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-"postStartCommand": "docker run -p 8888:8888 dwcjava/sandbox:000",
-
+  "features": {
+  },
+  "postStartCommand": "/opt/bbx/bin/bbjservices",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-pack",
+        "redhat.java"
+      ]
+    }
+  }
 }
