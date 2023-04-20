@@ -1,41 +1,39 @@
 package samples;
 
-
 import org.dwcj.App;
+import org.dwcj.annotation.InlineStyleSheet;
 import org.dwcj.component.button.Button;
-import org.dwcj.component.button.event.ButtonClickEvent;
 import org.dwcj.component.label.Label;
 import org.dwcj.component.window.Frame;
-import org.dwcj.exceptions.DwcjAppInitializeException;
+import org.dwcj.exceptions.DwcjException;
 
 /**
- * A simple HelloWorld class.
+ * A simple HelloWorld app.
  */
+@InlineStyleSheet(/* css */"""
+    .frame {
+      display: inline-grid;
+      gap: 20px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px dotted;
+    }
+      """)
 public class HelloWorldJava extends App {
 
   @Override
-  public void run() throws DwcjAppInitializeException {
+  public void run() throws DwcjException {
 
-    Frame panel = new Frame();
-    panel.setStyle("display", "inline-grid");
-    panel.setStyle("gap", "20px");
-    panel.setStyle("margin", "20px");
-    panel.setStyle("padding", "20px");
-    panel.setStyle("border", "1px dotted");
+    Frame frame = new Frame();
+    frame.addClassName("frame");
 
-    panel.add(new Label("Hello World"));
+    Label label = new Label("Hello World!");
 
     Button btn = new Button("Say Hello");
-    panel.add(btn);
+    btn.setTheme(Button.Theme.SUCCESS)
+        .setExpanse(Button.Expanse.XLARGE)
+        .onClick(e -> msgbox("Hello World!"));
 
-    btn.setTheme(Button.Theme.SUCCESS);
-    btn.setExpanse(Button.Expanse.XLARGE);
-
-    btn.onClick(this::onButtonPush);
+    frame.add(label, btn);
   }
-
-  private void onButtonPush(ButtonClickEvent buttonClickEvent) {
-    App.msgbox("Hello DWCJ!");
-  }
-
 }
