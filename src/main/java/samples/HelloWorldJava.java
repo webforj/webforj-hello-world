@@ -1,9 +1,12 @@
 package samples;
 
 import org.dwcj.App;
+import org.dwcj.annotation.AppTitle;
 import org.dwcj.annotation.InlineStyleSheet;
+import org.dwcj.component.Expanse;
 import org.dwcj.component.button.Button;
-import org.dwcj.component.label.Label;
+import org.dwcj.component.button.ButtonTheme;
+import org.dwcj.component.texts.Label;
 import org.dwcj.component.window.Frame;
 import org.dwcj.exceptions.DwcjException;
 
@@ -19,6 +22,7 @@ import org.dwcj.exceptions.DwcjException;
       border: 1px dotted;
     }
       """)
+@AppTitle("DWCJ Hello World")
 public class HelloWorldJava extends App {
 
   @Override
@@ -30,8 +34,8 @@ public class HelloWorldJava extends App {
     Label label = new Label("Hello World!");
 
     Button btn = new Button("Say Hello");
-    btn.setTheme(Button.Theme.SUCCESS)
-        .setExpanse(Button.Expanse.XLARGE)
+    btn.setTheme(ButtonTheme.SUCCESS)
+        .setExpanse(Expanse.XLARGE)
         .onClick(e -> msgbox("Hello World!"));
 
     frame.add(label, btn);
