@@ -6,9 +6,12 @@ A simple HelloWorld project written in Java.
 package samples;
 
 import org.dwcj.App;
+import org.dwcj.annotation.AppTitle;
 import org.dwcj.annotation.InlineStyleSheet;
+import org.dwcj.component.Expanse;
 import org.dwcj.component.button.Button;
-import org.dwcj.component.label.Label;
+import org.dwcj.component.button.ButtonTheme;
+import org.dwcj.component.texts.Label;
 import org.dwcj.component.window.Frame;
 import org.dwcj.exceptions.DwcjException;
 
@@ -50,22 +53,11 @@ The result is a modern, responsive HTML5 Web App.
 ![image](https://user-images.githubusercontent.com/4833070/170968208-6ff79616-ed95-40f7-aa75-d5180bf71167.png)
 
 
-## How to deploy the App 
+## Getting Started
 
-1. If not done yet, install BBj and the [BBj DWCJ Plug-In](https://github.com/BBj-Plugins/DWCJ).
-2. Download the .jar file from the [releases](https://github.com/DwcJava/HelloWorldJava/releases) of this project.
-3. In the DWCJ Plug-In's configure-Screen, add the .jar to the classpath.
-4. Push the launch button.
+Go to https://dwcj.org/docs/installation/github_codespaces to learn how to run this sample in a GitHub codespace.
 
-## How to fetch the source code and configure
+The DWCJ Documentation starts here: https://dwcj.org/
 
-1. Clone this repository
-2. Point your IDE to the home directory
-3. Adjust your settings.xml or the pom.xml to point <dwcj-lib> to the copy on your disc, most likely <bbjdir>/plugins/DWCJ/lib/dwc-xxxxx.jar
-4. Reload maven and build the jar
-5. Go to the DWCJ Plug-In configure screen and add the jar file (or the class bin folder) to the classpath
-    ![image](https://user-images.githubusercontent.com/4833070/170968004-959b47e3-fc82-4819-9894-9ca2a0c9717b.png)
-6. enter samples.HelloWorldJava into the "Class" entry  
-7. Click the "launch" button to see if it works
 
 
