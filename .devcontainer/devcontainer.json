@@ -4,7 +4,8 @@
   "portsAttributes": {
     "8888": {
       "label": "app-preview"
-    },
+    }
+  },
   "build": {
     "dockerfile": "Dockerfile"
   },
