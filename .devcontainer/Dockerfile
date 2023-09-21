@@ -1,4 +1,4 @@
-FROM dwcjava/sandbox:000
+FROM dwcjava/sandbox:latest
 
 EXPOSE 8888
 
