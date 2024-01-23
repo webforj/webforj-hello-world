@@ -24,6 +24,9 @@ import org.dwcj.exceptions.DwcjException;
 """)
 @AppTitle("DWCJ Hello World")
 public class HelloWorldJava extends App {
+  
+  Paragraph hello = new Paragraph("Hello World!");
+  Button btn = new Button("Say Hello");
 
   @Override
   public void run() throws DwcjException {
@@ -31,9 +34,6 @@ public class HelloWorldJava extends App {
     Frame mainFrame = new Frame();
     mainFrame.addClassName("mainFrame");
 
-    Paragraph hello = new Paragraph("Hello World!");
-
-    Button btn = new Button("Say Hello");
     btn.setTheme(ButtonTheme.SUCCESS)
         .setExpanse(Expanse.XLARGE)
         .addClickListener(e -> msgbox("Hello World!"));
