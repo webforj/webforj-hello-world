@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>23.06-SNAPSHOT</version>
+            <version>23.06</version>
         </dependency>
     </dependencies>
 
