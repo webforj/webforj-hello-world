@@ -6,7 +6,7 @@
 
     <groupId>org.dwcj.samples</groupId>
     <artifactId>hello-world-java</artifactId>
-    <version>23.03</version>
+    <version>23.06</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>23.03</version>
+            <version>23.06</version>
         </dependency>
     </dependencies>
 
