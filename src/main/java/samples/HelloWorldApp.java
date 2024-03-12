@@ -1,14 +1,14 @@
 package samples;
 
-import org.dwcj.App;
-import org.dwcj.annotation.AppTitle;
-import org.dwcj.annotation.InlineStyleSheet;
-import org.dwcj.component.Expanse;
-import org.dwcj.component.button.Button;
-import org.dwcj.component.button.ButtonTheme;
-import org.dwcj.component.html.elements.Paragraph;
-import org.dwcj.component.window.Frame;
-import org.dwcj.exceptions.DwcjException;
+import com.webforj.App;
+import com.webforj.annotation.AppTitle;
+import com.webforj.annotation.InlineStyleSheet;
+import com.webforj.component.Expanse;
+import com.webforj.component.button.Button;
+import com.webforj.component.button.ButtonTheme;
+import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.window.Frame;
+import com.webforj.exceptions.WebforjException;
 
 /**
  * A simple HelloWorld app.
@@ -23,13 +23,13 @@ import org.dwcj.exceptions.DwcjException;
   }
 """)
 @AppTitle("DWCJ Hello World")
-public class HelloWorldJava extends App {
+public class HelloWorldApp extends App {
   
   Paragraph hello = new Paragraph("Hello World!");
   Button btn = new Button("Say Hello");
 
   @Override
-  public void run() throws DwcjException {
+  public void run() throws WebforjException {
 
     Frame mainFrame = new Frame();
     mainFrame.addClassName("mainFrame");
