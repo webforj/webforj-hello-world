@@ -1,4 +1,4 @@
-FROM webfrorj/sandbox:rc
+FROM webforj/sandbox:rc
 
 EXPOSE 8888
 
