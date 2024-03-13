@@ -1,4 +1,4 @@
-FROM dwcjava/sandbox:rc
+FROM webfrorj/sandbox:rc
 
 EXPOSE 8888
 

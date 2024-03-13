@@ -1,5 +1,5 @@
 {
-  "name": "DWCJ HelloWorld Application",
+  "name": "Webforj HelloWorld Application",
   "forwardPorts": [8888],
   "portsAttributes": {
     "8888": {
