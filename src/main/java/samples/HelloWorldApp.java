@@ -22,7 +22,7 @@ import com.webforj.exceptions.WebforjException;
     border: 1px dotted;
   }
 """)
-@AppTitle("DWCJ Hello World")
+@AppTitle("webforJ Hello World")
 public class HelloWorldApp extends App {
   
   Paragraph hello = new Paragraph("Hello World!");
