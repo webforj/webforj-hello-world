@@ -9,6 +9,7 @@ import com.webforj.component.button.ButtonTheme;
 import com.webforj.component.html.elements.Anchor;
 import com.webforj.component.html.elements.H1;
 import com.webforj.component.html.elements.Img;
+import com.webforj.component.html.elements.Span;
 import com.webforj.component.layout.flexlayout.FlexLayout;
 import com.webforj.component.window.Frame;
 import com.webforj.exceptions.WebforjException;
@@ -20,33 +21,25 @@ import com.webforj.exceptions.WebforjException;
 @AppTitle("webforJ Hello World")
 @InlineStyleSheet("context://css/styles.css")
 public class HelloWorldApp extends App {
-
-  private Img logo = new Img("https://documentation.webforj.com/img/webforj_icon.svg");
+  private Span wave = new Span("👋");
   private H1 title = new H1("Welcome to webforJ");
   private Button counter = new Button("Count is 0");
-  private Anchor docs = new Anchor("Check out the docs to learn more!");
-  private FlexLayout canvas = FlexLayout.create(logo, title, counter, docs)
+  private Anchor docs = new Anchor("https://documentation.webforj.com/", "Check out the docs to learn more!");
+  private FlexLayout canvas = FlexLayout.create(wave, title, counter, docs)
       .vertical()
       .justify().center()
       .align().center()
       .build()
-      .setSpacing("2em");
+      .setSpacing("2em")
+      .setStyle("height", "100dvh");
   private int count = 0;
 
   @Override
   public void run() throws WebforjException {
-
     Frame mainFrame = new Frame();
-    mainFrame.addClassName("mainFrame");
     mainFrame.add(canvas);
 
-    canvas.addClassName("canvas");
-    logo.addClassName("logo");
     counter.setTheme(ButtonTheme.PRIMARY);
-    counter.onClick(e -> {
-      counter.setText("Count is " + (++count));
-    });
-    docs.setHref("https://documentation.webforj.com/")
-        .setTarget("_blank");
+    counter.onClick(e -> counter.setText("Count is " + (++count)));
   }
 }
