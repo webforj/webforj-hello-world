@@ -1,6 +1,5 @@
-# HelloWorldJava
-A simple HelloWorld project written in Java.
-
+# webforJ HelloWorld
+A simple webforJ HelloWorld project.
 
 ```java
 package samples;
@@ -28,7 +27,7 @@ import org.dwcj.exceptions.DwcjException;
     }
       """)
 @AppTitle("DWCJ Hello World")
-public class HelloWorldJava extends App {
+public class WebforjHelloWorld extends App {
 
   @Override
   public void run() throws DwcjException {
@@ -50,14 +49,11 @@ public class HelloWorldJava extends App {
 
 The result is a modern, responsive HTML5 Web App.
 
-![image](https://user-images.githubusercontent.com/4833070/170968208-6ff79616-ed95-40f7-aa75-d5180bf71167.png)
+![image](https://github.com/webforj/webforj-hello-world/assets/4313420/7fc147a7-a056-465b-8775-fa218c105bd2)
 
 
-## Getting Started
+## Documentations
 
-Go to https://dwcj.org/docs/installation/github_codespaces to learn how to run this sample in a GitHub codespace.
-
-The DWCJ Documentation starts here: https://dwcj.org/
-
+Check the documentations [here](https://documentation.webforj.com/docs/installation)
 
 
