@@ -1,0 +1,6 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.completion.favoriteStaticMembers": [
+        "com.webforj.component.optiondialog.OptionDialog.*"
+    ]
+}
