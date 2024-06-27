@@ -15,9 +15,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-maven",
         "vscjava.vscode-java-pack",
-        "redhat.java"
+        "BEU.vscode-java-html"
       ]
     }
   }
