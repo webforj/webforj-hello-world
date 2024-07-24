@@ -4,45 +4,45 @@ A simple webforJ HelloWorld project.
 ```java
 package samples;
 
-import org.dwcj.App;
-import org.dwcj.annotation.AppTitle;
-import org.dwcj.annotation.InlineStyleSheet;
-import org.dwcj.component.Expanse;
-import org.dwcj.component.button.Button;
-import org.dwcj.component.button.ButtonTheme;
-import org.dwcj.component.texts.Label;
-import org.dwcj.component.window.Frame;
-import org.dwcj.exceptions.DwcjException;
+import static com.webforj.component.optiondialog.OptionDialog.showMessageDialog;
+
+import com.webforj.App;
+import com.webforj.annotation.AppTitle;
+import com.webforj.annotation.InlineStyleSheet;
+import com.webforj.component.button.Button;
+import com.webforj.component.button.ButtonTheme;
+import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.window.Frame;
+import com.webforj.exceptions.WebforjException;
 
 /**
  * A simple HelloWorld app.
  */
 @InlineStyleSheet(/* css */"""
-    .frame {
-      display: inline-grid;
-      gap: 20px;
-      margin: 20px;
-      padding: 20px;
-      border: 1px dotted;
-    }
-      """)
-@AppTitle("DWCJ Hello World")
+  .mainFrame {
+    display: inline-grid;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px dashed;
+    border-radius: 10px;
+  }
+""")
+@AppTitle("webforJ Hello World")
 public class WebforjHelloWorld extends App {
+  
+  Paragraph hello = new Paragraph("Hello World!");
+  Button btn = new Button("Say Hello");
 
   @Override
-  public void run() throws DwcjException {
+  public void run() throws WebforjException {
+    Frame mainFrame = new Frame();
+    mainFrame.addClassName("mainFrame");
 
-    Frame frame = new Frame();
-    frame.addClassName("frame");
+    btn.setTheme(ButtonTheme.PRIMARY)
+        .addClickListener(e -> showMessageDialog("Hello World!", "webforJ Message"));
 
-    Label label = new Label("Hello World!");
-
-    Button btn = new Button("Say Hello");
-    btn.setTheme(ButtonTheme.SUCCESS)
-        .setExpanse(Expanse.XLARGE)
-        .onClick(e -> msgbox("Hello World!"));
-
-    frame.add(label, btn);
+    mainFrame.add(hello, btn);
   }
 }
 ```
