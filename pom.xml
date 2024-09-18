@@ -19,7 +19,9 @@
       <groupId>com.webforj</groupId>
       <artifactId>webforj</artifactId>
       <version>${webforj.version}</version>
-      <type>pom</type>
+      <scope>system</scope>
+      <systemPath>/Users/Shared/Laptop/Github/webforj/webforj/target/webforj-24.12-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+      <!-- <type>pom</type> -->
     </dependency>
   </dependencies>
 
@@ -38,8 +40,8 @@
         </executions>
         <configuration>
           <deployurl>http://localhost:8888/webforj-install</deployurl>
-          <classname>samples.WebforjHelloWorld</classname>
-          <publishname>hello-world</publishname>
+          <classname>samples.Application</classname>
+          <publishname>app-layout-with-routing2</publishname>
           <debug>true</debug>
         </configuration>
       </plugin>
