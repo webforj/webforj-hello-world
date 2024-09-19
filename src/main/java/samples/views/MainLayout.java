@@ -2,7 +2,10 @@ package samples.views;
 
 import java.util.Set;
 
-import com.webforj.component.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.H1;
 import com.webforj.component.icons.FeatherIcon;
@@ -15,15 +18,25 @@ import com.webforj.router.Router;
 import com.webforj.router.annotation.FrameTitle;
 import com.webforj.router.annotation.Route;
 import com.webforj.router.event.NavigateEvent;
+import com.webforj.router.event.WillEnterEvent;
+import com.webforj.router.history.ParametersBag;
+import com.webforj.router.observer.WillEnterObserver;
 
+import samples.service.AuthService;
 import samples.views.about.AboutView;
 import samples.views.helloworld.HelloWorldView;
+import samples.views.login.LoginView;
 
 @Route
-public class MainLayout extends Composite<AppLayout> {
+@Component
+@Lazy
+public class MainLayout extends Composite<AppLayout> implements WillEnterObserver {
+  AuthService authService;
   H1 title = new H1();
 
-  public MainLayout() {
+  @Autowired
+  public MainLayout(AuthService authService) {
+    this.authService = authService;
     setHeader();
     setDrawer();
     Router.getCurrent().onNavigate(this::onNavigate);
@@ -50,9 +63,20 @@ public class MainLayout extends Composite<AppLayout> {
     layout.addToDrawer(appNav);
   }
 
+  @Override
+  public void onWillEnter(WillEnterEvent ev, ParametersBag parameters) {
+    boolean isAuthenticated = authService.isAuthenticated();
+    ev.veto(!isAuthenticated);
+
+    if (!isAuthenticated) {
+      ev.getRouter().navigate(LoginView.class);
+    }
+  }
+
   private void onNavigate(NavigateEvent ev) {
-    Set<Component> components = ev.getContext().getComponents();
-    Component view = components.stream().filter(c -> c.getClass().getSimpleName().endsWith("View")).findFirst()
+    Set<com.webforj.component.Component> components = ev.getContext().getComponents();
+    com.webforj.component.Component view = components.stream()
+        .filter(c -> c.getClass().getSimpleName().endsWith("View")).findFirst()
         .orElse(null);
 
     if (view != null) {

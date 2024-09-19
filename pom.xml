@@ -12,6 +12,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <webforj.version>24.11</webforj.version>
+    <org.springframework.version>6.0.2</org.springframework.version>
   </properties>
 
   <dependencies>
@@ -22,6 +23,13 @@
       <scope>system</scope>
       <systemPath>/Users/Shared/Laptop/Github/webforj/webforj/target/webforj-24.12-SNAPSHOT-jar-with-dependencies.jar</systemPath>
       <!-- <type>pom</type> -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${org.springframework.version}</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
