@@ -7,7 +7,6 @@ import com.webforj.router.history.ParametersBag;
 import com.webforj.router.observer.WillEnterObserver;
 
 import samples.service.AuthService;
-import samples.views.MainLayout;
 import samples.views.helloworld.HelloWorldView;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +47,7 @@ public class LoginView extends Composite<Login> implements WillEnterObserver {
     if (isAuthenticated) {
       reRoute();
     } else {
-      getBoundComponent().setError(true);
+      getBoundComponent().setError(true).setEnabled(true);
     }
   }
 

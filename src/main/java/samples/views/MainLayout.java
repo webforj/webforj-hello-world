@@ -27,9 +27,9 @@ import samples.views.about.AboutView;
 import samples.views.helloworld.HelloWorldView;
 import samples.views.login.LoginView;
 
-@Route
 @Component
 @Lazy
+@Route
 public class MainLayout extends Composite<AppLayout> implements WillEnterObserver {
   AuthService authService;
   H1 title = new H1();
