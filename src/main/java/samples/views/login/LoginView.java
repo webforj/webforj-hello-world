@@ -1,6 +1,7 @@
 package samples.views.login;
 
 import com.webforj.router.Router;
+import com.webforj.router.annotation.FrameTitle;
 import com.webforj.router.annotation.Route;
 import com.webforj.router.event.WillEnterEvent;
 import com.webforj.router.history.ParametersBag;
@@ -17,9 +18,10 @@ import com.webforj.component.Composite;
 import com.webforj.component.login.Login;
 import com.webforj.component.login.event.LoginSubmitEvent;
 
-@Route("login")
 @Component
 @Lazy
+@Route("login")
+@FrameTitle("Login")
 public class LoginView extends Composite<Login> implements WillEnterObserver {
   AuthService authService;
 
