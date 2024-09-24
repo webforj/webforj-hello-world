@@ -51,7 +51,7 @@ public class MainLayout extends Composite<AppLayout> {
   }
 
   private void onNavigate(NavigateEvent ev) {
-    Set<Component> components = ev.getContext().getComponents();
+    Set<Component> components = ev.getContext().getAllComponents();
     Component view = components.stream().filter(c -> c.getClass().getSimpleName().endsWith("View")).findFirst()
         .orElse(null);
 
