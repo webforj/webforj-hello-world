@@ -11,6 +11,8 @@ import com.webforj.component.layout.applayout.AppLayout;
 import com.webforj.component.layout.appnav.AppNav;
 import com.webforj.component.layout.appnav.AppNavItem;
 import com.webforj.component.layout.toolbar.Toolbar;
+import com.webforj.router.PersistentRouteOutlet;
+import com.webforj.router.RouteOutlet;
 import com.webforj.router.Router;
 import com.webforj.router.annotation.FrameTitle;
 import com.webforj.router.annotation.Route;
@@ -20,7 +22,9 @@ import samples.views.about.AboutView;
 import samples.views.helloworld.HelloWorldView;
 
 @Route
-public class MainLayout extends Composite<AppLayout> {
+public class MainLayout extends Composite<AppLayout> implements RouteOutlet{
+  PersistentRouteOutlet outlet = new PersistentRouteOutlet(this);
+
   H1 title = new H1();
 
   public MainLayout() {
@@ -59,5 +63,15 @@ public class MainLayout extends Composite<AppLayout> {
       FrameTitle frameTitle = view.getClass().getAnnotation(FrameTitle.class);
       title.setText(frameTitle != null ? frameTitle.value() : "");
     }
+  }
+
+  @Override
+  public void removeRouteContent(Component arg0) {
+    outlet.removeRouteContent(arg0);
+  }
+
+  @Override
+  public void showRouteContent(Component arg0) {
+    outlet.showRouteContent(arg0);
   }
 }

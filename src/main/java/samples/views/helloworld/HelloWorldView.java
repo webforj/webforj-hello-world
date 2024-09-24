@@ -8,6 +8,7 @@ import com.webforj.component.field.TextField;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
 import com.webforj.component.layout.flexlayout.FlexLayout;
 import com.webforj.component.toast.Toast;
+import com.webforj.concern.HasVisibility;
 import com.webforj.router.annotation.FrameTitle;
 import com.webforj.router.annotation.Route;
 
@@ -15,7 +16,7 @@ import samples.views.MainLayout;
 
 @Route(value = "/", outlet = MainLayout.class)
 @FrameTitle("Hello World")
-public class HelloWorldView extends Composite<FlexLayout> {
+public class HelloWorldView extends Composite<FlexLayout> implements HasVisibility<HelloWorldView> {
 
   public HelloWorldView() {
     FlexLayout layout = getBoundComponent();
