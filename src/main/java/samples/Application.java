@@ -5,7 +5,7 @@ import com.webforj.annotation.AppTitle;
 import com.webforj.annotation.InlineStyleSheet;
 import com.webforj.annotation.Routify;
 
-@Routify(packages = "samples.views")
+@Routify(packages = "samples.views", debug = true)
 @AppTitle("webforJ Starter")
 @InlineStyleSheet("context://styles/application.css")
 public class Application extends App {
