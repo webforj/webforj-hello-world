@@ -74,7 +74,7 @@ public class MainLayout extends Composite<AppLayout> implements WillEnterObserve
   }
 
   private void onNavigate(NavigateEvent ev) {
-    Set<com.webforj.component.Component> components = ev.getContext().getComponents();
+    Set<com.webforj.component.Component> components = ev.getContext().getAllComponents();
     com.webforj.component.Component view = components.stream()
         .filter(c -> c.getClass().getSimpleName().endsWith("View")).findFirst()
         .orElse(null);

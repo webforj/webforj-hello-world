@@ -49,7 +49,7 @@
         <configuration>
           <deployurl>http://localhost:8888/webforj-install</deployurl>
           <classname>samples.Application</classname>
-          <publishname>app-layout-with-routing2</publishname>
+          <publishname>app-layout-with-routing</publishname>
           <debug>true</debug>
         </configuration>
       </plugin>
