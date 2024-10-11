@@ -11,7 +11,7 @@
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <webforj.version>24.11</webforj.version>
+    <webforj.version>24.12</webforj.version>
   </properties>
 
   <dependencies>
