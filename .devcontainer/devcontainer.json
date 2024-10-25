@@ -1,23 +1,17 @@
 {
   "name": "Webforj HelloWorld Application",
-  "forwardPorts": [8888],
+  "forwardPorts": [6065],
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:17",
   "portsAttributes": {
-    "8888": {
-      "label": "app-preview"
+    "6065": {
+      "label": "App Preview",
+      "onAutoForward": "notify"
     }
   },
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "features": {
-  },
-  "postStartCommand": "/opt/bbx/bin/bbjservices",
+  "features": {},
   "customizations": {
     "vscode": {
-      "extensions": [
-        "vscjava.vscode-java-pack",
-        "BEU.vscode-java-html"
-      ]
+      "extensions": ["vscjava.vscode-java-pack", "BEU.vscode-java-html", "vscjava.vscode-maven"]
     }
   }
 }

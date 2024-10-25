@@ -52,7 +52,7 @@ The result is a modern, responsive HTML5 Web App.
 ![image](https://github.com/webforj/webforj-hello-world/assets/4313420/7fc147a7-a056-465b-8775-fa218c105bd2)
 
 
-## Documentations
+## Documentation
 
 Check the documentations [here](https://documentation.webforj.com/docs/installation)
 
