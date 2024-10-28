@@ -9,8 +9,10 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/maven:1": {
-      "version": "3.8.6" // You can specify the desired Maven version here
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "true",
+      "installGradle": "false"
     }
   },
   "customizations": {
