@@ -8,10 +8,18 @@
       "onAutoForward": "notify"
     }
   },
-  "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {
+      "version": "3.8.6" // You can specify the desired Maven version here
+    }
+  },
   "customizations": {
     "vscode": {
-      "extensions": ["vscjava.vscode-java-pack", "BEU.vscode-java-html", "vscjava.vscode-maven"]
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "BEU.vscode-java-html",
+        "vscjava.vscode-maven"
+      ]
     }
   }
 }
