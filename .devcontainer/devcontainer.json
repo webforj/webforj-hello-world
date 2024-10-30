@@ -1,9 +1,9 @@
 {
   "name": "Webforj HelloWorld Application",
-  "forwardPorts": [6065],
+  "forwardPorts": [8080],
   "image": "mcr.microsoft.com/vscode/devcontainers/java:17",
   "portsAttributes": {
-    "6065": {
+    "8080": {
       "label": "App Preview",
       "onAutoForward": "notify"
     }
