@@ -40,11 +40,6 @@
   <dependencies>
     <dependency>
       <groupId>com.webforj</groupId>
-      <artifactId>webforj-engine</artifactId>
-      <version>${webforj.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.webforj</groupId>
       <artifactId>webforj</artifactId>
       <version>${webforj.version}</version>
     </dependency>
