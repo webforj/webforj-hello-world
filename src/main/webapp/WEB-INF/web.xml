@@ -13,12 +13,4 @@
   <welcome-file-list>
     <welcome-file>app</welcome-file>
   </welcome-file-list>
-  <filter>
-    <filter-name>WebforjCacheControlFilter</filter-name>
-    <filter-class>com.webforj.servlet.WebforjCacheControlFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>WebforjCacheControlFilter</filter-name>
-    <url-pattern>*.js</url-pattern>
-  </filter-mapping>
 </web-app>
