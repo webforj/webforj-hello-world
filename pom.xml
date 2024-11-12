@@ -42,6 +42,8 @@
       <groupId>com.webforj</groupId>
       <artifactId>webforj</artifactId>
       <version>${webforj.version}</version>
+      <scope>system</scope>
+      <systemPath>/Users/Shared/Laptop/Github/webforj/webforj/target/webforj-24.20-SNAPSHOT-jar-with-dependencies.jar</systemPath>
     </dependency>
   </dependencies>
 
@@ -70,6 +72,9 @@
         <version>${jetty.version}</version>
         <configuration>
           <scan>${jetty.scan}</scan>
+          <httpConnector>
+            <port>8080</port>
+          </httpConnector>
           <webApp>
             <contextPath>/</contextPath>
           </webApp>

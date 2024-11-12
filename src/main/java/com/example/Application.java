@@ -1,15 +1,15 @@
-package com.webforj.samples;
+package com.example;
 
 import com.webforj.App;
 import com.webforj.annotation.AppTitle;
-import com.webforj.annotation.InlineStyleSheet;
 import com.webforj.annotation.Routify;
+import com.webforj.annotation.StyleSheet;
 
 /**
  * A simple HelloWorld app.
  */
-@Routify(packages = "com.webforj.samples.views")
+@Routify(packages = "com.example.views")
 @AppTitle("webforJ Hello World")
-@InlineStyleSheet("context://styles/styles.css")
+@StyleSheet("ws://app.css")
 public class Application extends App{
 }
