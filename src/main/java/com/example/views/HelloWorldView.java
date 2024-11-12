@@ -1,13 +1,13 @@
 package com.example.views;
 
-import static com.webforj.component.optiondialog.OptionDialog.showMessageDialog;
-
 import com.webforj.component.Composite;
+import com.webforj.component.Theme;
 import com.webforj.component.button.Button;
 import com.webforj.component.button.ButtonTheme;
 import com.webforj.component.field.TextField;
 import com.webforj.component.layout.flexlayout.FlexDirection;
 import com.webforj.component.layout.flexlayout.FlexLayout;
+import com.webforj.component.toast.Toast;
 import com.webforj.router.annotation.Route;
 
 /**
@@ -26,7 +26,7 @@ public class HelloWorldView extends Composite<FlexLayout> {
     self.setStyle("margin", "1em auto");
 
     btn.setTheme(ButtonTheme.PRIMARY)
-        .addClickListener(e -> showMessageDialog("Hello " + hello.getValue() + "!", "Welcome"));
+        .addClickListener(e -> Toast.show("Welcome to webforJ Starter " + hello.getValue() + "!", Theme.GRAY));
 
     self.add(hello, btn);
   }
