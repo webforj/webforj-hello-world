@@ -1,3 +1,9 @@
+# ⚠️ This starter is not recommended ⚠️
+
+**This starter is not recommended for new webforJ applications. Instead, start with one of the [supported webforJ archetypes](https://github.com/webforj/webforj-archetypes)**
+
+
+
 # webforJ HelloWorld
 A simple webforJ HelloWorld project.
 
