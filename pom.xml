@@ -11,7 +11,7 @@
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <webforj.version>24.11</webforj.version>
+    <webforj.version>24.12</webforj.version>
   </properties>
 
   <dependencies>
@@ -19,9 +19,7 @@
       <groupId>com.webforj</groupId>
       <artifactId>webforj</artifactId>
       <version>${webforj.version}</version>
-      <scope>system</scope>
-      <systemPath>/Users/Shared/Laptop/Github/webforj/webforj/target/webforj-24.12-SNAPSHOT-jar-with-dependencies.jar</systemPath>
-      <!-- <type>pom</type> -->
+      <type>pom</type>
     </dependency>
   </dependencies>
 
